@@ -1,5 +1,4 @@
-import React from "react";
-import { Stack, Button, IconButton } from "@mui/material";
+import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 const MuiButton = () => {
@@ -97,6 +96,40 @@ const MuiButton = () => {
         >
           large3
         </Button>
+      </Stack>
+
+      {/* Button Group  / allowing content left center right*/}
+      <Stack direction={"row"}>
+        {/* orientation */}
+        <ButtonGroup
+          variant="contained"
+          orientation="vertical"
+          size="small"
+          color="secondary"
+          aria-label="button group"
+        >
+          <Button
+            onClick={() => {
+              alert("left");
+            }}
+          >
+            Left
+          </Button>
+          <Button
+            onClick={() => {
+              alert("Center");
+            }}
+          >
+            Center
+          </Button>
+          <Button
+            onClick={() => {
+              alert("right");
+            }}
+          >
+            Right
+          </Button>
+        </ButtonGroup>
       </Stack>
     </Stack>
   );
